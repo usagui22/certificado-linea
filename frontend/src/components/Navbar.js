@@ -1,30 +1,39 @@
+import React, { useState } from 'react'
+import { NavLink } from 'react-router-dom'
+import "../style/Navbar.css";
 
-import React from 'react'
-import { Link } from 'react-router-dom'
-
-function Navbar_Top() {
-  return (
-    <nav className='nav-top' >
-        <Link to={"/home-admi"}>Certificados</Link>
-      <ul >
-        <li >
-          <Link to={"/lista-unidad"}>Unidad</Link>
-          </li>
-        <li >
-          <Link to={"/lista-documento"}>Documento</Link>
-          </li>
-        <li >
-          <Link to={"/lista-usuario"}>Usuario</Link>
-          </li>
-        <li >
-          <Link to={"/lista-temporada"}>Calendario</Link>
-          </li>
-        <li >
-          <Link to={"/lista-evento"}>Evento</Link>
-          </li>
-      </ul>
-    </nav>
-  )
+function Navbar() {
+const {menuOpen, setmenuOpen} = useState(false);
+return (
+<nav className='nav' >
+<NavLink to={"/home-adm"} className={"tittle"}>Certificados</NavLink>
+<div className='menu' onClick={()=>{setmenuOpen(!menuOpen);}}>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+</div>
+<ul className={menuOpen? "open": ""}>
+<li >
+<NavLink to={"/lista-unidad"}>Unidad</NavLink>
+</li>
+<li >
+<NavLink to={"/lista-documento"}>Documento</NavLink>
+</li>
+<li >
+<NavLink to={"/lista-usuario"}>Usuario</NavLink>
+</li>
+<li >
+<NavLink to={"/lista-temporada"}>Calendario</NavLink>
+</li>
+<li >
+<NavLink to={"/lista-evento"}>Evento</NavLink>
+</li>
+</ul>
+</nav>
+)
 }
 
-export default Navbar_Top
+export default Navbar
+
