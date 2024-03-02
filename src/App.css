@@ -1,0 +1,25 @@
+
+.App {
+  background-color: #fefefe;
+  height: 100%;
+  width: 100%;
+  }
+  
+/*grid grid-cols-12*/
+.principal {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+/*col-span-3 bg-blue h-screen pl-2*/
+.principal .side-menu {
+  grid-column: span 2;
+  background-color: #0f177a;
+  height: 100vh;  
+}
+/*col-span-9 bg-red-500 h-screen pl-2*/
+.principal .contenido {
+  grid-column: span 10;
+  background-color: whitesmoke;
+  height: 100vh;
+  padding-left: 0.5rem;
+}
