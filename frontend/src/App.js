@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
-import Rutas from './routes/Rutas';
+import Trails from './routes/trails';
 import Menu from './components/Menu';
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
                 <Menu />    
             </div>
             <div className='contenido col-span-9 bg-red-500 h-screen pl-2'>
-                <Rutas />
+                <Trails />
             </div>
             
         </div>        

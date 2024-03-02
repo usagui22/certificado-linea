@@ -11,6 +11,8 @@ return (
 <span></span>
 <span></span>
 <span></span>
+<span></span>
+<span></span>
 </div>
 <ul className={menuOpen? "open": ""}>
 <li >
@@ -21,6 +23,12 @@ return (
 </li>
 <li >
 <NavLink to={"/lista-usuario"}>Usuario</NavLink>
+</li>
+<li >
+<NavLink to={"/lista-temporada"}>Calendario</NavLink>
+</li>
+<li >
+<NavLink to={"/lista-evento"}>Evento</NavLink>
 </li>
 </ul>
 </nav>

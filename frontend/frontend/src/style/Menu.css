@@ -17,7 +17,7 @@
     margin-left: 0.25rem;        
 }     
 
-.sidebar-item:hover :active{    
+.sidebar-item:hover{    
     color: white;    
     border-radius: 0.5rem;
     margin: 1rem;
