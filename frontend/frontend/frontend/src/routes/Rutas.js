@@ -8,12 +8,12 @@ function Rutas() {
 return (
 <Routes>
 <Route path="/home-adm" element={<Home />}/>
-<Route path="/lista-unidad" element={<List />}/>
-<Route path="/lista-usuario" element={<List />}/>
-<Route path="/lista-documento" element={<List />}/>
-<Route path="/lista-temporada" element={<List />}/>
-<Route path="/lista-evento" element={<List />}/>
-<Route path="/tabla-temporada" element={<Table />} />
+<Route path="/lista-unidad" element={<List entidad='unidad' />}/>
+<Route path="/lista-usuario" element={<List entidad='usuario' />}/>
+<Route path="/lista-documento" element={<List entidad='documento' />}/>
+<Route path="/lista-temporada" element={<List entidad='temporada' />}/>
+<Route path="/lista-evento" element={<List entidad='evento' />}/>
+<Route path="/tabla-temporada" element={<Table entidad='temporadas' />} />
 </Routes>
 )
 }

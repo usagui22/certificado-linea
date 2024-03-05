@@ -54,12 +54,4 @@ export const cargarPlantilla = (params) => {
   }
 }
 
-export const cargarResponsable = () => {
-  let path="usuario/listar-responsables";
-    try {
-      const resp= API.get(path)
-      return resp.data;
-    } catch (error) {
-      console.log("No se encuentran registrados responsables de unidad")
-    }
-}
+

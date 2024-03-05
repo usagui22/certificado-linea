@@ -2,7 +2,6 @@
 import { Table } from 'react-bootstrap';
 import React, { useEffect, useState } from 'react'
 import { cargarUnidad, cargarUsuario, cargarDocumento, cargarEvento, cargarPlantilla } from '../connections/loads';
-import { BotonAsignar, BotonEditar, BotonEliminar } from '../components/Boton';
 
 function generateTable(props) {
   const {entidad, listTitulos} = props;
@@ -59,15 +58,6 @@ function generateTable(props) {
                         {at.attributes}
                       </td>
                     )}
-                  <td>
-                    <BotonEditar direccionEditar={"/editarUnidad"}/>                                
-                  </td>              
-                  <td>
-                    <BotonEliminar direccionEliminar={"/eliminarUnidad"}/>                
-                  </td> 
-                  <td>
-                    <BotonAsignar direccionAsignar={"/ListaCheck/"} id_resp={dato.id}/>                
-                  </td> 
                 </tr>
               ))                
           }            
