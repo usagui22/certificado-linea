@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import { Table } from 'react-bootstrap';
 import { titulos } from '../data/titulo';
+import { cargarResponsable } from '../connections/loads';
 
 function List(props) {
   const {entidad} = props;
   const [lista, setLista] = useState([]);
+  
 
   useEffect(() => {
-    setLista()
+    setLista(cargarResponsable)
   },[])
 
   return (
@@ -28,8 +30,20 @@ function List(props) {
         </thead>
         <tbody>
             {
-              lista.map(() => {
-                
+              lista.map((r, i) => {
+                return(
+                  <tr key={i}>
+                    {
+                      r.attibutes.map(
+                        (a)=>(
+                          <td>
+                            {a.attibute}
+                          </td>
+                        )
+                      )
+                    }
+                  </tr>
+                )
               })
             }
         </tbody>

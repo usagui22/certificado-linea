@@ -44,7 +44,7 @@ export const cargarDocumento = (params) => {
   }
 }
 
-export const cargarPlantilla = (params) => {
+export const cargarPlantillaLista = (params) => {
   let path = "plantilla/listar-plantilla";
   try {
     const res = API.get(path);
@@ -62,4 +62,64 @@ export const cargarResponsable = () => {
     } catch (error) {
       console.log("No se encuentran registrados responsables de unidad")
     }
+}
+
+export const cargarParticipantes = () =>{
+  let pat = "usuario/listar-participantes";
+  try {
+    const r = API.get(pat)
+    return r.data;
+  } catch (error) {
+    console.log("Lista no encontrada de usuarios")
+  }
+}
+
+export const subirArchivoPlantilla = () =>{
+  let p = "plantilla/crear-plantilla";
+  try {
+    API.post(p).then(
+      console.log("subiendo nueva plantilla")
+    )
+  } catch (error) {
+    console.log("Error al subir elemento")
+  }
+}
+
+export const crearUnidad = () =>{
+  let p = "unidad/crear-unidad";
+  try {
+    API.post(p).then(
+      console.log("generando crear unidad")
+    )
+  } catch (error) {
+    console.log("Error al crear unidad")
+  }
+}
+
+export const cambiarResponsable = (id_asic,uni_res) => {
+  let p =`unidad/cambiar-responsable/?id_rep=${id_asic}&id_uni=${uni_res}`;
+  try {
+    API.get(p).then(console.log("Unidad cambio de responsable"))
+  }catch(error){
+      console.log("Error al crear unidad")    
+  }      
+}
+
+export const cargarCargos = () =>{
+  let path = "usuario/listar-cargos";
+  try {
+    const r = API.get(path);
+    return r.data;
+  } catch (error) {
+    console.log("Los cargos no se han encontrado")
+  }
+}
+
+export const subirUsuario = (data) =>{
+  let p = "usuario/registrar-usuario";
+  try {
+    API.post(p, data)
+  } catch (error) {
+    
+  }
 }

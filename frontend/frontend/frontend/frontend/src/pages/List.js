@@ -1,10 +1,10 @@
 import React from 'react'
 
-function List() {
+function List(props) {
 
 return (
 <div>
-<h1 >Lista</h1> 
+<h1 >Lista {props.entidad}</h1> 
 </div>
 )
 }

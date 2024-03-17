@@ -1,8 +1,8 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import { Table } from 'react-bootstrap';
 import React, { useEffect, useState } from 'react'
-import { cargarUnidad, cargarUsuario, cargarDocumento, cargarEvento, cargarPlantilla } from '../connections/loads';
-import { BotonAsignar, BotonEditar, BotonEliminar } from '../components/Boton';
+import { cargarUnidad, cargarUsuario, cargarDocumento, cargarEvento, cargarPlantillaLista } from '../connections/loads';
+import { BotonAsignar, BotonEditar, BotonEliminar } from '../components/generateButton';
 
 function generateTable(props) {
   const {entidad, listTitulos} = props;
@@ -14,19 +14,19 @@ function generateTable(props) {
     let ent_min = entidad.toLowerCase();
     switch (ent_min) { 
       case ent_min = 'unidad':
-          setContenido(cargarUnidad());
+          setContenido(cargarUnidad);
         break;
       case ent_min = 'usuario':
-          setContenido(cargarUsuario());
+          setContenido(cargarUsuario);
         break;
       case ent_min = 'documento':
-          setContenido(cargarDocumento());
+          setContenido(cargarDocumento);
         break;
       case ent_min = 'plantilla':
-          setContenido(cargarPlantilla());
+          setContenido(cargarPlantillaLista);
         break;
       case ent_min = 'evento':
-          setContenido(cargarEvento());
+          setContenido(cargarEvento);
         break;
       default:
         console.log("la entidad buscada no es la adecuada, revise las listas");

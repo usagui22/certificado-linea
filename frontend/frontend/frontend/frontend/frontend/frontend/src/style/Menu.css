@@ -1,0 +1,33 @@
+.sidebar-content {
+    position: absolute;
+    left: 0;
+    width: 100%;    
+}
+
+.sidebar-content .sidebar-item {
+    position: relative;
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    color: #154367;    
+    min-width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: start;
+}
+
+.sidebar-content .sidebar-item .sidebar-icon .sidebar-tittle {
+    font-size: 24px;
+    color: #154367;
+    position: relative;
+    display: block;
+    line-height: 50px;
+    text-align: start;
+    white-space: nowrap;
+}
+
+.sidebar-content .sidebar-item .sidebar-icon:hover,
+.sidebar-content .sidebar-item .sidebar-tittle:hover {
+    color: aqua;
+    
+}
